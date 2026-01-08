@@ -3,7 +3,7 @@ from datetime import datetime
 from domain.entities.entities import PengumpulanTugas
 from domain.repositories.repositories import (
     PengumpulanTugasRepository,
-    TugasRepository
+    TugasRepository 
 )
 from .services.id_generator_services import generate_id
 

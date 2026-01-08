@@ -1,7 +1,7 @@
 from datetime import datetime
 from domain.entities.entities import Tugas
 from domain.repositories.repositories import TugasRepository
-from .services.id_generator_services import generate_id
+from .services.id_generator_services import generate_id 
 
 
 class TugasUseCase:
