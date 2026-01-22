@@ -17,3 +17,12 @@ class PengumpulanTugas:
     nama_mahasiswa: str
     nama_file: str
     waktu_kumpul: datetime
+
+@dataclass
+class Materi:
+    id: str
+    judul: str
+    deskripsi: str
+    file_path: str
+
+

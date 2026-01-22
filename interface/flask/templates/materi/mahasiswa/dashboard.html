@@ -1,0 +1,11 @@
+<h2>Daftar Materi</h2>
+
+<ul>
+{% for m in materi_list %}
+  <li>
+    {{ m.judul }} <br>
+    <small>{{ m.deskripsi }}</small><br>
+    <a href="{{ url_for('static', filename=m.file_path) }}">Download</a>
+  </li>
+{% endfor %}
+</ul>

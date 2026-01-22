@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Materi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            margin-bottom: 24px;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 18px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 12px 22px;
+            border-radius: 24px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        a {
+            padding: 12px 22px;
+            border-radius: 24px;
+            text-decoration: none;
+            background: #e2e8f0;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        a:hover {
+            background: #cbd5e1;
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tambah Materi</h2>
+
+    <!-- PERBAIKAN UTAMA ADA DI ACTION -->
+    <form action="/dosen/simpan" method="POST" enctype="multipart/form-data">
+        <label>Judul Materi</label>
+        <input type="text" name="judul" required>
+
+        <label>Deskripsi</label>
+        <textarea name="deskripsi"></textarea>
+
+        <label>File Materi</label>
+        <input type="file" name="file">
+
+        <div class="actions">
+            <a href="/">Batal</a>
+            <button type="submit">Simpan</button>
+        </div>
+    </form>
+
+    <div class="note">
+        Format file bebas (PDF, PPT, DOC, dll)
+    </div>
+</div>
+
+</body>
+</html>

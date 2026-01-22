@@ -1,14 +1,10 @@
-CREATE TABLE tugas (
-    id TEXT PRIMARY KEY,
+
+
+CREATE TABLE materi (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     judul TEXT NOT NULL,
     deskripsi TEXT,
-    deadline TEXT NOT NULL
+    file_path TEXT NOT NULL,
+    
 );
 
-CREATE TABLE pengumpulan (
-    id TEXT PRIMARY KEY,
-    tugas_id TEXT NOT NULL,
-    nama_mahasiswa TEXT NOT NULL,
-    nama_file TEXT NOT NULL,
-    waktu_kumpul TEXT NOT NULL
-);

@@ -7,9 +7,11 @@ def create_app():
     app.secret_key = "replace-with-secret"
 
     # register routes
-    from interface.flask.routes import tugas_bp
+    # from interface.flask.routes import tugas_bp
+    from interface.flask.materi_routes import materi_bp
      
-    app.register_blueprint(tugas_bp)
+    # app.register_blueprint(tugas_bp)
+    app.register_blueprint(materi_bp)
     
 
     # app.register_blueprint(main_bp)

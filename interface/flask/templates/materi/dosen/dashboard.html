@@ -1,0 +1,18 @@
+<h2>Materi Perkuliahan</h2>
+<a href="{{ url_for('materi.form_tambah_materi') }}">+ Upload Materi</a><p>
+   <a href="/mahasiswa">Mode Mahasiswa</a>
+</p>
+
+<ul>
+{% for m in materi_list %}
+  <li>
+    {{ m.judul }} -
+    <a href="{{ url_for('static', filename=m.file_path) }}">Download</a>
+    <a href="{{ url_for('materi.hapus_materi', materi_id=m.id) }}"
+       onclick="return confirm('Hapus materi ini?')">
+        Hapus
+    </a>
+  </li>
+{% endfor %} 
+
+</ul>
